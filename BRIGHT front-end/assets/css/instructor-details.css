@@ -38,12 +38,7 @@
     font-size: 15px;
 }
 
-.instructor-courses {
-    border: 5px red solid;
-}
-
 .instructor-biography {
-    border: 5px blue solid;
     display: none;
 }
 
