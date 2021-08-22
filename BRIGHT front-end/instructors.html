@@ -7,8 +7,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Courses</title>
-
     <!-- Bootstrap core CSS -->
     <link href="./assets/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/sb-admin-2.css">
@@ -17,8 +15,8 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
-    <link rel="stylesheet" href="assets/css/courses.css">
-    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/instructors.css">
+    <title>Instructors</title>
 </head>
 
 <body>
@@ -36,10 +34,10 @@
                             <a class="nav-link" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./courses.html">Courses</a>
+                            <a class="nav-link" href="./courses.html">Courses</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="./instructors.html">Instructors</a>
+                            <a class="nav-link active" aria-current="page" href="./instructors.html">Instructors</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
@@ -56,10 +54,11 @@
 
     <!--PAGE TITLE-->
     <div class="jumbotron jumbotron-fluid">
-        <h1 class="display-4"><span style="font-family: 'Pacifico', cursive;">Bright</span> 's Courses</h1>
+        <h1 class="display-4"><span style="font-family: 'Pacifico', cursive;">Bright</span> 's Instructors</h1>
     </div>
 
 
+    <!--PAGE CONTENT-->
     <div class="container">
         <div class="row">
 
@@ -67,7 +66,7 @@
             <div class="col-md-4 col-lg-3">
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-dark">Filter Courses</h6>
+                        <h6 class="m-0 font-weight-bold text-dark">Filter Instructors</h6>
                     </div>
                     <div class="card-body">
 
@@ -85,7 +84,7 @@
 
                         <!--Filter Courses-->
                         <!--By Category-->
-                        <h6 class="m-0 mt-3 font-weight-bold text-secondary">Courses Categories</h6>
+                        <h6 class="m-0 mt-3 font-weight-bold text-secondary">Field</h6>
                         <div id="my-categories">
                             <div class="form-check">
                                 <input class="form-check-input shadow-none" type="radio" name="radio-for-categories" id="all-courses" checked>
@@ -94,33 +93,6 @@
                                 </label>
                             </div>
                             <!-- THE REST OF THE COURSE CATEGORIES IN HERE-->
-                        </div>
-
-                        <!--By difficulty-->
-                        <h6 class="m-0 mt-3 font-weight-bold text-secondary">Difficulty</h6>
-                        <div class="form-check">
-                            <input class="form-check-input shadow-none" type="radio" name="radio-for-difficulty" id="all-difficulty" checked>
-                            <label class="form-check-label" for="all-courses">
-                                All
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input shadow-none" type="radio" name="radio-for-difficulty" id="beginner">
-                            <label class="form-check-label" for="beginner">
-                                Beginner
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input shadow-none" type="radio" name="radio-for-difficulty" id="intermediate">
-                            <label class="form-check-label" for="intermediate">
-                                Intermediate
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input shadow-none" type="radio" name="radio-for-difficulty" id="advanced">
-                            <label class="form-check-label" for="advanced">
-                                Advanced
-                            </label>
                         </div>
 
                         <!--By languages-->
@@ -157,45 +129,25 @@
                             </label>
                         </div>
 
-                        <!--By prices-->
-                        <h6 class="m-0 mt-3 font-weight-bold text-secondary">Prices</h6>
-                        <div class="form-check">
-                            <input class="form-check-input shadow-none" type="radio" name="radio-for-prices" id="all-courses" checked>
-                            <label class="form-check-label" for="all-courses">
-                                All
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input shadow-none" type="radio" name="radio-for-prices" id="free-courses">
-                            <label class="form-check-label" for="free-courses">
-                                Free
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input shadow-none" type="radio" name="radio-for-prices" id="paid-courses">
-                            <label class="form-check-label" for="paid-courses">
-                                Paid
-                            </label>
-                        </div>
                     </div>
                 </div>
             </div>
 
-            <!--COURSES CARD SECTION-->
+            <!--INSTRUCTORS CARD SECTION-->
             <div class="col-md-8 col-lg-9">
                 <div class="card shadow mb-4">
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-dark">Available courses for you</h6>
+                        <span></span>
+                        <!--added a span so i can justify the content position-->
                         <div class="dropdown no-arrow">
                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
                                 <div class="dropdown-header">Sort Options</div>
-                                <a class="dropdown-item" href="#">Upload date</a>
-                                <a class="dropdown-item" href="#">Price</a>
-                                <a class="dropdown-item" href="#">Rating</a>
+                                <a class="dropdown-item" href="#">Newest Instructor</a>
+                                <a class="dropdown-item" href="#">Popular Instructor</a>
                             </div>
                         </div>
                     </div>
@@ -205,15 +157,28 @@
                             <div class="col-12 mb-3">
                                 <div class="card border-bottom-info h-100 py-2">
                                     <div class="card-body">
-                                        <div class="row align-items-center">
+                                        <div class="row ">
 
-                                            <img class="col-md-4" src="./assets/images/home-office-336377__340.webp" alt="Card image cap" height="150px">
-                                            <div class="col-md-8">
-                                                <div class="text-lg font-weight-bold text-dark text-uppercase mb-1">
-                                                    <a href="./course-details.html" class="text-dark" style="text-decoration: none;">Course title</a>
-                                                </div>
-                                                <div class="review-rate-info">
-                                                    <div class="rates-star">
+                                            <img class="col-lg-4 instructor-image" src="./assets/images/teacher.jpg" alt="Card image cap">
+                                            <div class="col-lg-8 d-flex flex-column justify-content-between">
+                                                <div>
+                                                    <div class="text-lg font-weight-bold text-uppercase mb-1">
+                                                        <a href="./instructor-details.html" class="text-dark" style="text-decoration: none;">Instructor name</a>
+                                                    </div>
+
+                                                    <ul class="instructor-profession-icon-list">
+                                                        <li>
+                                                            <i class="fas fa-user-tie text-info"></i> Graphic Designer
+                                                        </li>
+                                                        <li>
+                                                            <i class="fas fa-book text-info"></i> 25 Classes
+                                                        </li>
+                                                        <li>
+                                                            <i class="fas fa-map-marker-alt text-info"></i> Tunis
+                                                        </li>
+                                                    </ul>
+
+                                                    <div>
                                                         <i class="fas fa-star text-warning"></i>
                                                         <i class="fas fa-star text-warning"></i>
                                                         <i class="fas fa-star text-warning"></i>
@@ -222,28 +187,62 @@
 
                                                         <strong class="col-lg-8 col-md-8 col-12 text-success">4.5</strong>
                                                     </div>
-                                                    <span class="text-secondary">350 reviews</span>
                                                 </div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                                    $40,000
+
+                                                <div>
+                                                    <p>
+                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure vitae sunt est reiciendis in! Esse soluta quisquam provident blanditiis sequi.
+                                                    </p>
                                                 </div>
+
+                                                <ul class="instructor-social-icon-list">
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fab fa-facebook-f"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fab fa-linkedin-in"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fab fa-twitter"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-12 mb-3">
                                 <div class="card border-bottom-info h-100 py-2">
                                     <div class="card-body">
-                                        <div class="row align-items-center">
+                                        <div class="row ">
 
-                                            <img class="col-md-4" src="./assets/images/office-620822__340.webp" alt="Card image cap" height="150px">
-                                            <div class="col-md-8">
-                                                <div class="text-lg font-weight-bold text-dark text-uppercase mb-1">
-                                                    <a href="./course-details.html" class="text-dark" style="text-decoration: none;">Course title</a>
-                                                </div>
-                                                <div class="review-rate-info">
-                                                    <div class="rates-star">
+                                            <img class="col-lg-4 instructor-image" src="./assets/images/teacher2.png" alt="Card image cap">
+                                            <div class="col-lg-8 d-flex flex-column justify-content-between">
+                                                <div>
+                                                    <div class="text-lg font-weight-bold text-dark text-uppercase mb-1">
+                                                        <a href="./instructor-details.html" class="text-dark" style="text-decoration: none;">Instructor name</a>
+                                                    </div>
+
+                                                    <ul class="instructor-profession-icon-list">
+                                                        <li>
+                                                            <i class="fas fa-user-tie text-info"></i> Graphic Designer
+                                                        </li>
+                                                        <li>
+                                                            <i class="fas fa-book text-info"></i> 25 Classes
+                                                        </li>
+                                                        <li>
+                                                            <i class="fas fa-map-marker-alt text-info"></i> Tunis
+                                                        </li>
+                                                    </ul>
+
+                                                    <div>
                                                         <i class="fas fa-star text-warning"></i>
                                                         <i class="fas fa-star text-warning"></i>
                                                         <i class="fas fa-star text-warning"></i>
@@ -252,29 +251,62 @@
 
                                                         <strong class="col-lg-8 col-md-8 col-12 text-success">4.5</strong>
                                                     </div>
-                                                    <span class="text-secondary">350 reviews</span>
                                                 </div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                                    $40,000
+
+                                                <div>
+                                                    <p>
+                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure vitae sunt est reiciendis in! Esse soluta quisquam provident blanditiis sequi.
+                                                    </p>
                                                 </div>
+
+                                                <ul class="instructor-social-icon-list">
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fab fa-facebook-f"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fab fa-linkedin-in"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fab fa-twitter"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-12 mb-3">
                                 <div class="card border-bottom-info h-100 py-2">
                                     <div class="card-body">
-                                        <div class="row align-items-center">
+                                        <div class="row ">
 
-                                            <img class="col-md-4" src="./assets/images/mobile-605422_1920.jpg" alt="Card image cap" height="150px">
-                                            <div class="col-md-8">
-                                                <div class="text-lg font-weight-bold text-dark text-uppercase mb-1">
-                                                    <a href="./course-details.html" class="text-dark" style="text-decoration: none;">Course title</a>
-                                                </div>
-                                                <div class="review-rate-info">
-                                                    <div class="rates-star">
+                                            <img class="col-lg-4 instructor-image" src="./assets/images/teacher3.jpg" alt="Card image cap">
+                                            <div class="col-lg-8 d-flex flex-column justify-content-between">
+                                                <div>
+                                                    <div class="text-lg font-weight-bold text-dark text-uppercase mb-1">
+                                                        <a href="./instructor-details.html" class="text-dark" style="text-decoration: none;">Instructor name</a>
+                                                    </div>
+
+                                                    <ul class="instructor-profession-icon-list">
+                                                        <li>
+                                                            <i class="fas fa-user-tie text-info"></i> Graphic Designer
+                                                        </li>
+                                                        <li>
+                                                            <i class="fas fa-book text-info"></i> 25 Classes
+                                                        </li>
+                                                        <li>
+                                                            <i class="fas fa-map-marker-alt text-info"></i> Tunis
+                                                        </li>
+                                                    </ul>
+
+                                                    <div>
                                                         <i class="fas fa-star text-warning"></i>
                                                         <i class="fas fa-star text-warning"></i>
                                                         <i class="fas fa-star text-warning"></i>
@@ -283,11 +315,31 @@
 
                                                         <strong class="col-lg-8 col-md-8 col-12 text-success">4.5</strong>
                                                     </div>
-                                                    <span class="text-secondary">350 reviews</span>
                                                 </div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                                    $40,000
+
+                                                <div>
+                                                    <p>
+                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure vitae sunt est reiciendis in! Esse soluta quisquam provident blanditiis sequi.
+                                                    </p>
                                                 </div>
+
+                                                <ul class="instructor-social-icon-list">
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fab fa-facebook-f"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fab fa-linkedin-in"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fab fa-twitter"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -300,7 +352,6 @@
         </div>
     </div>
 
-
     <!-- Footer -->
     <footer class="py-5 bg-gradient-dark text-light">
         <div class="container">
@@ -311,7 +362,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
-    <script src="./assets/js/courses.js"></script>
+    <script src="./assets/js/instructors.js"></script>
 </body>
 
 </html>

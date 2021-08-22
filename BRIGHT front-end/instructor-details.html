@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/sb-admin-2.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/instructor-details.css">
+    <title>Instructor's details</title>
+</head>
+
+<body>
+    <!--NAVIGATION BAR-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Bright</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./courses.html">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./instructors.html">Instructors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <a role="button" href="./views/login.html" class="btn btn-outline-info">Sign in</a>
+                    <a role="button" href="./views/register.html" class="btn btn-primary">Sign up</a>
+                    <a role="button" href="./views/login.html" class="btn btn-danger">Log out</a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <!--PAGE TITLE-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <img class="instructor-image" src="./assets/images/teacher3.jpg" alt="instructor-image">
+                </div>
+
+                <div class="col-12 col-lg-9">
+                    <div class="row">
+                        <div class="col-12 text-light">
+                            <h3 class="font-weight-bold">Instructor name</h3>
+                        </div>
+                        <div class="col-12">
+                            <span>Web Designer</span>
+                            <span>,Canada</span>
+                        </div>
+
+                        <div class="col-12">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+
+                            <strong class="col-lg-8 col-md-8 col-12 text-success">4.5</strong>
+                        </div>
+
+                        <div class="col-12 mt-2">
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure vitae sunt est reiciendis in! Esse soluta quisquam provident blanditiis sequi.
+                            </p>
+                        </div>
+
+                        <ul class="col-12 instructor-social-icon-list">
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 my-5">
+                <button class="btn btn-info" onclick="showInstructorCourses()">Courses</button>
+                <button class="btn btn-info" onclick="showInstructorBio()">Biography</button>
+            </div>
+
+            <div id="instructor-courses-id" class="col-12 instructor-courses">
+
+            </div>
+
+            <div id="instructor-biography-id" class="col-12 instructor-biography">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-gradient-dark text-light">
+        <div class="container">
+            <p class="m-0 text-center">Copyright &copy; Your Website 2021</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="./assets/js/instructor-details.js"></script>
+</body>
+
+</html>
