@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="../../assets/css/sb-admin-2.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../../assets/css/course-details.css">
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+
+            <a class="sidebar-brand d-flex align-items-center justify-content-center text-info" href="BRIGHT front-end\courses.html">
+                  Bright
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="BRIGHT front-end\views\dashboard.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Admin items -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fab fa-elementor"></i>
+                    <span>Categories Management</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Students Management</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Instructors Management</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-book"></i>
+                    <span>Courses Management</span></a>
+            </li>
+
+            <!-- Instructors items -->
+            <li class="nav-item">
+                <a class="nav-link" href="BRIGHT front-end\views\instructor\my-courses.html">
+                    <i class="fas fa-book"></i>
+                    <span>My courses</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="BRIGHT front-end\views\instructor\my-students.html">
+                    <i class="fas fa-cog"></i>
+                    <span>My students</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Log out</span></a>
+            </li>
+
+            <!-- Students items -->
+            <li class="nav-item">
+                <a class="nav-link" href="BRIGHT front-end\views\student\my-learnings.html">
+                    <i class="fas fa-book"></i>
+                    <span>My Learning</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Log out</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i> Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 mx-auto text-gray-800">Advance Web Designing Courses</h1>
+                    </div>
+                </div>
+
+                <div class="col ml-2">
+                    <div class="row">
+                        <div class="col-11 mx-auto">
+                            <!--COURSE OVERVIEW CARD -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h4 class="m-0 font-weight-bold text-primary">Course Overview</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed tenetur delectus amet nesciunt nulla animi. Aliquam maiores molestias magni accusamus repellat reiciendis cum! Repellat consequatur quis, rem qui assumenda
+                                        alias beatae enim maxime, officia nemo odio molestiae. Molestias dolorum sunt maxime neque quis culpa voluptatem ipsum hic suscipit quidem repudiandae alias velit voluptatibus, vero tenetur possimus aut repellat
+                                        nisi, perspiciatis, dolorem aliquid veritatis ea! Exercitationem similique qui magnam iure debitis, ipsum veritatis voluptates unde, sed aut quo nesciunt quam ipsam! Temporibus neque praesentium quis odio, excepturi,
+                                        nulla, harum accusamus reprehenderit eveniet libero enim iste. Earum saepe quam dignissimos nobis reiciendis?</p>
+                                    <h6 class="font-weight-bold text-dark ">Requirements</h6>
+                                    <ul class="requirements-list">
+                                        <!-- HERE WE SHOULD ADD REQUIREMENTS LIST FROM JAVASCRIPT -->
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                        <li>Lorem ipsum dolor sit amet.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!--COURSE CURRICULUM CARD -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h4 class="m-0 font-weight-bold text-primary">Course Curriculum</h6>
+                                </div>
+
+                                <!--COURSE MODULES-->
+                                <div class="card-body">
+
+                                    <div class="card  border-left-info mb-4">
+                                        <!-- Card Header - Accordion -->
+                                        <a href="#module1" class="d-block card-header py-3 collapsed " data-toggle="collapse" role="button" aria-expanded="false" aria-controls="module1" style="text-decoration: none;">
+                                            <h6 class="m-0 font-weight-bold text-dark">Collapsable Card Example</h6>
+                                        </a>
+                                        <!-- Card Content - Collapse -->
+                                        <div class="collapse" id="module1">
+                                            <div class="card-body">
+                                                This is a collapsable card example using Bootstrap's built in collapse functionality. <strong>Click on the card header</strong> to see the card body collapse and expand!
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card  border-left-info mb-4">
+                                        <!-- Card Header - Accordion -->
+                                        <a href="#module2" class="d-block card-header py-3 collapsed " data-toggle="collapse" role="button" aria-expanded="false" aria-controls="module2" style="text-decoration: none;">
+                                            <h6 class="m-0 font-weight-bold text-dark">Collapsable Card Example</h6>
+                                        </a>
+                                        <!-- Card Content - Collapse -->
+                                        <div class="collapse" id="module2">
+                                            <div class="card-body">
+                                                This is a collapsable card example using Bootstrap's built in collapse functionality. <strong>Click on the card header</strong> to see the card body collapse and expand!
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card  border-left-info mb-4">
+                                        <!-- Card Header - Accordion -->
+                                        <a href="#module3" class="d-block card-header py-3 collapsed " data-toggle="collapse" role="button" aria-expanded="false" aria-controls="module3" style="text-decoration: none;">
+                                            <h6 class="m-0 font-weight-bold text-dark">Collapsable Card Example</h6>
+                                        </a>
+                                        <!-- Card Content - Collapse -->
+                                        <div class="collapse" id="module3">
+                                            <div class="card-body">
+                                                This is a collapsable card example using Bootstrap's built in collapse functionality. <strong>Click on the card header</strong> to see the card body collapse and expand!
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card  border-left-info mb-4">
+                                        <!-- Card Header - Accordion -->
+                                        <a href="#module4" class="d-block card-header py-3 collapsed " data-toggle="collapse" role="button" aria-expanded="false" aria-controls="module4" style="text-decoration: none;">
+                                            <h6 class="m-0 font-weight-bold text-dark">Collapsable Card Example</h6>
+                                        </a>
+                                        <!-- Card Content - Collapse -->
+                                        <div class="collapse" id="module4">
+                                            <div class="card-body">
+                                                This is a collapsable card example using Bootstrap's built in collapse functionality. <strong>Click on the card header</strong> to see the card body collapse and expand!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--INSTRUCTOR'S DEFTAILS CARD-->
+                            <div class="card shadow mb-4">
+                                <div class="card-body">
+                                    <div class="row">
+
+                                        <!-- INSTRUCTOR'S IMAGE-->
+                                        <div class="col-md-4 d-flex justify-content-center">
+                                            <div class="instructor-image">
+                                                <img src="http://placehold.it/900x350" alt="instructor-image" style="width: 170px;">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fab fa-facebook-f"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fab fa-linkedin-in"></i> </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fab fa-twitter"></i> </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!--INSTRUCTOR'S DESCRIPTION-->
+                                        <div class="col-md-8">
+                                            <h3 class="font-weight-bold text-dark">instructor name</h3>
+                                            <p class="text-secondary">
+                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae ducimus quas impedit asperiores sapiente cumque labore sit maiores culpa obcaecati cupiditate, tempore minima dolore accusantium magnam nesciunt, dignissimos voluptatem molestiae? Ea sapiente
+                                                ratione quod ex iure assumenda esse temporibus aliquam odit. Magnam voluptas et dicta, reiciendis a quo illum debitis quas minima deserunt voluptate possimus temporibus sequi recusandae, eius doloribus hic
+                                                reprehenderit corporis aut id est eum. Ipsa temporibus iste qui aspernatur, ducimus repellendus sunt deserunt eius illum voluptas excepturi sapiente maiores commodi eum reprehenderit ut amet voluptate mollitia
+                                                est. Iusto, recusandae ipsa quisquam nisi fuga alias corrupti id beatae.
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--RATING OVERVIEW CARD-->
+                            <div class="card shadow mb-4">
+                                <div class="card-body">
+                                    <div class="row">
+
+                                        <!-- RATING OVERVIEW BOX-->
+                                        <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                            <div class="justify-content-center">
+                                                <h1 class="display-4 font-weight-bold text-dark ml-2">4.5</h1>
+                                                <div>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="far fa-star text-warning"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--RATING OVERVIEW BARS-->
+                                        <div class="col-md-9">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h4 class="small font-weight-bold">5 Stars<span class="float-right">50%</span></h4>
+                                                    <div class="progress mb-1">
+                                                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                    <h4 class="small font-weight-bold">4 Stars <span class="float-right">20%</span></h4>
+                                                    <div class="progress mb-1">
+                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                    <h4 class="small font-weight-bold">3 Stars<span class="float-right">10%</span></h4>
+                                                    <div class="progress mb-1">
+                                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                    <h4 class="small font-weight-bold">1 & 2 Stars<span class="float-right">20%</span></h4>
+                                                    <div class="progress mb-1">
+                                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--REVIEW CARD SECTION-->
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-dark">Students reviews</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header">Sort by:</div>
+                                            <a class="dropdown-item" href="#">Upload date</a>
+                                            <a class="dropdown-item" href="#">Rating</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="row border-left-info p-3 mb-3 shadow">
+                                        <div class="col-12">
+                                            <div class="review-header">
+                                                <img src="../../assets/images/teacher2.png" alt="">
+                                                <div>
+                                                    <h6 class="text-dark">mohamed amine amine</h6>
+                                                    <p>Tue, 20 Mar 2020</p>
+                                                </div>
+                                                <div class="review-stars">
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="far fa-star text-warning"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <p>
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas maxime doloribus facere, dolorum illum ea a ad molestiae veritatis tempore minima harum nostrum, aperiam natus maiores nisi aliquid ipsum deleniti iure. Atque incidunt sequi ipsa quaerat
+                                                quod totam pariatur nam voluptatem, aperiam voluptate deserunt adipisci vero, dignissimos sapiente alias quo.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row border-left-info p-3 mb-3 shadow">
+                                        <div class="col-12">
+                                            <div class="review-header">
+                                                <img src="../../assets/images/teacher3.jpg" alt="">
+                                                <div>
+                                                    <h6 class="text-dark">haithem</h6>
+                                                    <p>Tue, 20 Mar 2020</p>
+                                                </div>
+                                                <div class="review-stars">
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="far fa-star text-warning"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <p>
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas maxime doloribus facere, dolorum illum ea a ad molestiae veritatis tempore minima harum nostrum, aperiam natus maiores nisi aliquid ipsum deleniti iure. Atque incidunt sequi ipsa quaerat
+                                                quod totam pariatur nam voluptatem, aperiam voluptate deserunt adipisci vero, dignissimos sapiente alias quo.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row border-left-info p-3 mb-3 shadow">
+                                        <div class="col-12">
+                                            <div class="review-header">
+                                                <img src="../../assets/images/teacher.jpg" alt="">
+                                                <div>
+                                                    <h6 class="text-dark">abderrahmen</h6>
+                                                    <p>Tue, 20 Mar 2020</p>
+                                                </div>
+                                                <div class="review-stars">
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="far fa-star text-warning"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <p>
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas maxime doloribus facere, dolorum illum ea a ad molestiae veritatis tempore minima harum nostrum, aperiam natus maiores nisi aliquid ipsum deleniti iure. Atque incidunt sequi ipsa quaerat
+                                                quod totam pariatur nam voluptatem, aperiam voluptate deserunt adipisci vero, dignissimos sapiente alias quo.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--LEAVE COMMENT AND RATE SECTION-->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Leave Comment</h6>
+                                </div>
+                                <div class="card-body">
+                                    <form action="">
+                                        <div class="mb-3">
+                                            <h6 class="small font-weight-bold">Rate this Course</h6>
+                                            <i class="far fa-star text-warning"></i>
+                                            <i class="far fa-star text-warning"></i>
+                                            <i class="far fa-star text-warning"></i>
+                                            <i class="far fa-star text-warning"></i>
+                                            <i class="far fa-star text-warning"></i>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <h6 class="small font-weight-bold">Your Review</h6>
+                                            <textarea style="max-width: 100%;" name="review" id="my-review" cols="100%" rows="5"></textarea>
+                                        </div>
+                                        <button class="btn btn-info btn-sm" type="button"> Submit Review </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2021</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../../assets/js/jquery.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.js"></script>
+    <script src="../../assets/js/jquery.easing.js"></script>
+    <script src="../../assets/js/sb-admin-2.js"></script>
+    <script src="../../assets/js/Chart.js"></script>
+    <script src="../../assets/js/chart-area-demo.js"></script>
+    <script src="../../assets/js/chart-pie-demo.js"></script>
+
+</body>
+
+</html>

@@ -165,6 +165,10 @@ ul {
     line-height: 5px;
 }
 
+.review-header .review-stars {
+    margin-left: auto;
+}
+
 
 /*MEDIA QUERIES*/
 
@@ -184,5 +188,11 @@ ul {
         height: 200px;
         margin-right: 0;
         margin-bottom: 50px;
+    }
+    .review-header {
+        flex-direction: column;
+    }
+    .review-header .review-stars {
+        margin-left: unset;
     }
 }
